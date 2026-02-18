@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, smallest = 9;
+    cout << "Enter number: ";
+    cin >> num;
+
+    while(num > 0) {
+        int digit = num % 10;
+        if(digit < smallest) smallest = digit;
+        num /= 10;
+    }
+    cout << "Smallest digit = " << smallest;
+    return 0;
+}
